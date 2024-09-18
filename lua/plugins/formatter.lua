@@ -15,7 +15,6 @@ return {
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
-				liquid = { "prettier" },
 				lua = { "stylua" },
 			},
 			format_on_save = {

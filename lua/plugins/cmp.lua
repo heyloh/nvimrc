@@ -2,13 +2,12 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
-		"hrsh7th/cmp-buffer", -- source for text in buffer
-		"hrsh7th/cmp-path", -- source for file system paths
-		"onsails/lspkind.nvim", -- vs-code like pictograms
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
+		"onsails/lspkind.nvim",
 	},
 	config = function()
 		local cmp = require("cmp")
-
 		local lspkind = require("lspkind")
 
 		cmp.setup({
@@ -27,8 +26,8 @@ return {
 
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "buffer" }, -- text within current buffer
-				{ name = "path" }, -- file system paths
+				{ name = "buffer" },
+				{ name = "path" },
 			}),
 
 			formatting = {

@@ -7,8 +7,10 @@ return {
 	},
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
-
 		treesitter.setup({
+			sync_install = false,
+			auto_install = true,
+			ignore_install = {},
 			highlight = {
 				enable = true,
 			},
@@ -31,9 +33,7 @@ return {
 				"vim",
 				"dockerfile",
 				"gitignore",
-				"query",
 				"vimdoc",
-				"c",
 			},
 		})
 	end,

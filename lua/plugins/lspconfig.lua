@@ -8,9 +8,7 @@ return {
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
-
 		local mason_lspconfig = require("mason-lspconfig")
-
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local keymap = vim.keymap
@@ -73,12 +71,6 @@ return {
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
-				})
-			end,
-			["emmet_ls"] = function()
-				lspconfig["emmet_ls"].setup({
-					capabilities = capabilities,
-					filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
 				})
 			end,
 			["lua_ls"] = function()
